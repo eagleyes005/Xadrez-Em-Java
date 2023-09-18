@@ -28,9 +28,7 @@ public class Peao extends Peca {
         if (JogoDeXadrez.getPeca(mouseX * 64, mouseY * 64) == null) { // Verifica se não existe peças no local
             movePeca(mouseX, mouseY);
         } else {
-            setX(this.getColunaX() * 64);
-            setY(this.getLinhaY() * 64);
-            System.out.println("Jogada inválida!");
+            jogadaInvalida();
         }
     }
 
@@ -48,8 +46,7 @@ public class Peao extends Peca {
             validaMovimentoPeao(mouseX, mouseY);
             primeiroLance = false;
         } else {
-            resetaMovimento();
-            System.out.println("Jogada inválida!");
+            jogadaInvalida();
         }
         // TODO adicionar jogada "En passant"
     }

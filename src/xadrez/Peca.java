@@ -46,7 +46,7 @@ public abstract class Peca {
                 JogoDeXadrez.getPeca(mouseX * 64, mouseY * 64).mataPeca();
                 movePeca(mouseX, mouseY);
             } else {
-                resetaMovimento();
+                jogadaInvalida();
             }
         } else {
             movePeca(mouseX, mouseY);
@@ -60,9 +60,10 @@ public abstract class Peca {
         this.setY(mouseY * 64);
     }
 
-    public void resetaMovimento() {
+    public void jogadaInvalida() {
         setX(this.getColunaX() * 64);
         setY(this.getLinhaY() * 64);
+        System.out.println("Jogada inválida!");
     }
 
     public void mataPeca() {

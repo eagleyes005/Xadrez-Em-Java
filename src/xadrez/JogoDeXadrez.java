@@ -1,6 +1,6 @@
 package xadrez;
 
-import xadrez.pecas.Peao;
+import xadrez.pecas.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -32,43 +32,41 @@ public class JogoDeXadrez {
         }
 
         // Instanciação das peças pretas
-        //Peca pTorre = new Peca(0, 0, false, "Torre", ps);
-        //Peca pCavalo = new Peca(1, 0, false, "Cavalo", ps);
-        //Peca pBispo = new Peca(2, 0, false, "Bispo", ps);
-        //Peca pRainha = new Peca(3, 0, false, "Rainha", ps);
-        //Peca pRei = new Peca(4, 0, false, "Rei", ps);
-        //Peca pBispo2 = new Peca(5, 0, false, "Bispo", ps);
-        //Peca pCavalo2 = new Peca(6, 0, false, "Cavalo", ps);
-        //Peca pTorre2 = new Peca(7, 0, false, "Torre", ps);
-        //Peca pPeao1 = new Peca(1, 1, false, "Peao", ps);
-        //Peca pPeao2 = new Peca(2, 1, false, "Peao", ps);
-        //Peca pPeao3 = new Peca(3, 1, false, "Peao", ps);
-        //Peca pPeao4 = new Peca(4, 1, false, "Peao", ps);
-        //Peca pPeao5 = new Peca(5, 1, false, "Peao", ps);
-        //Peca pPeao6 = new Peca(6, 1, false, "Peao", ps);
-        //Peca pPeao7 = new Peca(7, 1, false, "Peao", ps);
-        //Peca pPeao8 = new Peca(0, 1, false, "Peao", ps);
+        Torre pTorre = new Torre(0, 0, false, "Torre", ps);
+        Cavalo pCavalo = new Cavalo(1, 0, false, "Cavalo", ps);
+        Bispo pBispo = new Bispo(2, 0, false, "Bispo", ps);
+        Dama pDama = new Dama(3, 0, false, "Dama", ps);
+        Rei pRei = new Rei(4, 0, false, "Rei", ps);
+        Bispo pBispo2 = new Bispo(5, 0, false, "Bispo", ps);
+        Cavalo pCavalo2 = new Cavalo(6, 0, false, "Cavalo", ps);
+        Torre pTorre2 = new Torre(7, 0, false, "Torre", ps);
+        Peao pPeao1 = new Peao(1, 1, false, "Peao", ps);
+        Peao pPeao2 = new Peao(2, 1, false, "Peao", ps);
+        Peao pPeao3 = new Peao(3, 1, false, "Peao", ps);
+        Peao pPeao4 = new Peao(4, 1, false, "Peao", ps);
+        Peao pPeao5 = new Peao(5, 1, false, "Peao", ps);
+        Peao pPeao6 = new Peao(6, 1, false, "Peao", ps);
+        Peao pPeao7 = new Peao(7, 1, false, "Peao", ps);
+        Peao pPeao8 = new Peao(0, 1, false, "Peao", ps);
 
         // Instanciação das peças brancas
-        //Peca bTorre = new Peca(0, 7, true, "Torre", ps);
-        //Peca bCavalo = new Peca(1, 7, true, "Cavalo", ps);
-        //Peca bBispo = new Peca(2, 7, true, "Bispo", ps);
-        //Peca bRainha = new Peca(3, 7, true, "Rainha", ps);
-        //Peca bRei = new Peca(4, 7, true, "Rei", ps);
-        //Peca bBispo2 = new Peca(5, 7, true, "Bispo", ps);
-        //Peca bCavalo2 = new Peca(6, 7, true, "Cavalo", ps);
-        //Peca bTorre2 = new Peca(7, 7, true, "Torre", ps);
-        //Peca bPeao1 = new Peca(1, 6, true, "Peao", ps);
-        //Peca bPeao2 = new Peca(2, 6, true, "Peao", ps);
-        //Peca bPeao3 = new Peca(3, 6, true, "Peao", ps);
-        //Peca bPeao4 = new Peca(4, 6, true, "Peao", ps);
-        //Peca bPeao5 = new Peca(5, 6, true, "Peao", ps);
-        //Peca bPeao6 = new Peca(6, 6, true, "Peao", ps);
-        //Peca bPeao7 = new Peca(7, 6, true, "Peao", ps);
-        //Peca bPeao8 = new Peca(0, 6, true, "Peao", ps);
-
+        Torre bTorre = new Torre(0, 7, true, "Torre", ps);
+        Cavalo bCavalo = new Cavalo(1, 7, true, "Cavalo", ps);
+        Bispo bBispo = new Bispo(2, 7, true, "Bispo", ps);
+        Dama bDama = new Dama(3, 7, true, "Dama", ps);
+        Rei bRei = new Rei(4, 7, true, "Rei", ps);
+        Bispo bBispo2 = new Bispo(5, 7, true, "Bispo", ps);
+        Cavalo bCavalo2 = new Cavalo(6, 7, true, "Cavalo", ps);
+        Torre bTorre2 = new Torre(7, 7, true, "Torre", ps);
         Peao bPeao1 = new Peao(1, 6, true, "Peao", ps);
-        Peao pPeao1 = new Peao(1, 1, false, "Peao", ps);
+        Peao bPeao2 = new Peao(2, 6, true, "Peao", ps);
+        Peao bPeao3 = new Peao(3, 6, true, "Peao", ps);
+        Peao bPeao4 = new Peao(4, 6, true, "Peao", ps);
+        Peao bPeao5 = new Peao(5, 6, true, "Peao", ps);
+        Peao bPeao6 = new Peao(6, 6, true, "Peao", ps);
+        Peao bPeao7 = new Peao(7, 6, true, "Peao", ps);
+        Peao bPeao8 = new Peao(0, 6, true, "Peao", ps);
+
 
         JFrame quadro = new JFrame(); // Instância da tela do jogo
         quadro.setBounds(10, 10, 512, 512); // Posição e área da tela do jogo
@@ -123,7 +121,7 @@ public class JogoDeXadrez {
                     if (p.getTipo().equalsIgnoreCase("Rei")) {
                         i = 0;
                     }
-                    if (p.getTipo().equalsIgnoreCase("Rainha")) {
+                    if (p.getTipo().equalsIgnoreCase("Dama")) {
                         i = 1;
                     }
                     if (p.getTipo().equalsIgnoreCase("Bispo")) {
@@ -194,7 +192,7 @@ public class JogoDeXadrez {
 
             }
         });
-        quadro.setDefaultCloseOperation(3); // Operação para encerrar a aplicação é quando a tela é fechada
+        quadro.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); // Operação para encerrar a aplicação quando a tela é fechada
         quadro.setVisible(true); //Visibilidade do quadro
     }
 
